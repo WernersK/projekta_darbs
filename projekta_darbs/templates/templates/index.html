@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Literāro varoņu citāti{% endblock %}</h1>
+    {% for citats in citati %}
+    <a href="{{ url_for("citats", citata_id=citats["id"]) }}">
+        <h2>{{ citats["autors"] }} </h2>
+    </a>
+    <a href="{{ url_for('labot', id=citats['id']) }}" class="link-light">
+        <span class="p-1 text-emphasis-light bg-warning rounded-1">Labot</span>
+    </a>
+
+    {% endfor %}
+{% endblock %}    

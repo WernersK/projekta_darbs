@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  color: #333;
+}
+ 
+.logo {
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #123;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: url("https://r6vsk.lv/wp-content/uploads/2022/10/www-head-2021-riga.png")
+}

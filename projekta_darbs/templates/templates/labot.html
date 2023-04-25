@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %}Labot citātu{% endblock %}</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        <label for="autors">Autors</label>
+        <input type="text" name="autors" placeholder="Citāta autors" class="form-control" value="{{ request.form["
+            autors"] or citats["autors"] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="teksts">Citāts</label>
+        <textarea name="teksts" placeholder="Citāta teksts"
+            class="form-control">{{ request.form['teksts'] or citats["teksts"]}}</textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Saglabāt</button>
+    </div>
+
+</form>
+
+<hr>
+
+<form action="{{ url_for('dzest', id=citats['id']) }}" method="POST">
+    <button type="submit" value="Dzēst citātu" class="btn btn-danger btn-sm"
+        onclick="return confirm('Tiešām, tiešām?')">Dzēst</button>
+</form>
+
+
+
+
+
+
+{% endblock %}

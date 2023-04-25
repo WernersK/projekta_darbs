@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block title %}Reģistrācija{% endblock %}
+{% block content %}
+<form method="POST">
+    <h3 align="center">Reģistrācija</h3>
+    <div class="form-group">
+        <label for="email">E-Pasta adrese</label>
+        <input 
+        type="email" 
+        class="form-control" 
+        id="email" 
+        name="email" 
+        placeholder="Ievadiet savu e-pasta adresi"
+        />
+    </div>
+    <div class="form-group">
+        <label for="vards">Vārds Uzvārds</label>
+        <input 
+        type="text" 
+        class="form-control" 
+        id="vardsuzvards" 
+        name="vardsuzvards" 
+        placeholder="Ievadiet savu vārdu un uzvārdu"
+        />
+    </div>
+    <div class="form-group">
+        <label for="password1">Parole</label>
+        <input 
+        type="password" 
+        class="form-control" 
+        id="password1" 
+        name="password1" 
+        placeholder="Ievadiet paroli"
+        />
+    </div>
+    <div class="form-group">
+        <label for="password2">Parole (atkārtoti)</label>
+        <input 
+        type="password" 
+        class="form-control" 
+        id="password2" 
+        name="password2" 
+        placeholder="Apstipriniet paroli"
+        />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Reģistrēties</button>
+</form>
+{% endblock %}
