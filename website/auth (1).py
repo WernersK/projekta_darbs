@@ -13,7 +13,7 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        user = User.query.filter_by(email=email).first()
+        User.query.filter_by(email=form.email.data).first()
 
         if user:
             if check_password_hash(user.password, password):
@@ -22,10 +22,8 @@ def login():
                 flash('Nepareiza parole, mēģini vēlreiz!', category='error')
         else:
             flash('E-pasts neeksistē', category='error')
-    
-    # Render the login page
-    return render_template('login.html')
 
+    return render_template("login.html", boolean=True)
 
 
 @auth.route('/logout')
