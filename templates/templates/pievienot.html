@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %}Pievienot jaunu citātu{% endblock %}</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        <label for="autors">Autors</label>
+        <input type="text" name="autors"
+               placeholder="Citāta autors" class="form-control"
+               value="{{ request.form['autors'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="teksts">Citāts</label>
+        <textarea name="teksts" placeholder="Citāta teksts"
+                  class="form-control">{{ request.form['teksts'] }}</textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Pievienot</button>
+    </div>
+
+
+</form>
+
+
+
+
+
+
+{% endblock %}

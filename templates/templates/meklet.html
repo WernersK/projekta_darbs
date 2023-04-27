@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Meklēt citātu tekstā {% endblock %}</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="teksts">Ko vēlies atrast?</label>
+        <input type="text" name="teksts"
+               placeholder="Meklējamais teksts" class="form-control"
+               value="{{ request.form['teksts'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Meklēt</button>
+    </div>
+</form>
+
+
+{% endblock %}
